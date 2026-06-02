@@ -99,6 +99,7 @@ endpoint-compliance-bridge-lab/
 │   ├── REAL_WORLD_USE_CASE.md
 │   ├── REPLICATE_SIMPLE_PROJECT.md
 │   ├── REVERSE_ENGINEER_MAP.md
+│   ├── SECURITY_AND_DEMO_NOTES.md
 │   ├── SOURCES.md
 │   ├── STEP_BY_STEP_COMMANDS.md
 │   └── TRUTHFUL_TALKING_POINTS.md
