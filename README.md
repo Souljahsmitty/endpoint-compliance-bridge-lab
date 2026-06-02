@@ -89,6 +89,7 @@ endpoint-compliance-bridge-lab/
 │   ├── ADHD_JOB_APPLICATION_BRIEF.md
 │   ├── FEYNMAN_EXPLANATION.md
 │   ├── FLASHCARDS.md
+│   ├── GLOSSARY_AND_BASIC_TEST.md
 │   ├── REAL_WORLD_USE_CASE.md
 │   ├── REPLICATE_SIMPLE_PROJECT.md
 │   ├── REVERSE_ENGINEER_MAP.md

@@ -15,6 +15,12 @@ JAMF Pro is often used to manage Apple/macOS devices.
 
 BigFix is often used to track endpoint state, patch status, and compliance across devices.
 
+Endpoint means the computer itself: a MacBook, Windows laptop, desktop, or other managed user device.
+
+Compliance means the device meets the rule. In this lab, the rule is simple: patched or needs patch.
+
+Integration means combining two tools into one workflow. Here, JAMF-style inventory and BigFix-style patch status become one dashboard.
+
 This project is a tiny bridge:
 
 1. Ask JAMF-style data: "What devices do we manage?"
