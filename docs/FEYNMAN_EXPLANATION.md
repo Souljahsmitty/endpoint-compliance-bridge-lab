@@ -39,6 +39,19 @@ The skill is:
 
 "I noticed JAMF and BigFix were gaps for endpoint roles, so I built a small lab project around their API patterns. It uses a JAMF-style client for Mac inventory, a BigFix-style client for patch/compliance data, normalizes the data, and shows a simple HTML dashboard. It runs in Docker and defaults to mock data so it can be reviewed without enterprise credentials."
 
+## Real-World Use Case
+
+In the real world, this kind of tool helps an endpoint team decide what needs attention first.
+
+Example:
+
+- JAMF says a Mac exists and is managed.
+- BigFix says that same Mac is missing critical patches.
+- The dashboard shows "Needs Patch."
+- The endpoint specialist opens a ticket, follows the patch process, and documents the result.
+
+That is the real business value: not "cool code," but faster endpoint visibility and cleaner compliance follow-up.
+
 ## What To Say If Asked Directly
 
 Question: "Have you used JAMF Pro?"

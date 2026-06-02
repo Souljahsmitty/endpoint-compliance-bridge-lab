@@ -28,6 +28,14 @@ Truthful interview phrasing:
 
 ## Quick Start
 
+These commands run this finished repo. They are not the full from-scratch build path.
+
+For the from-scratch build path, read:
+
+```text
+docs/REPLICATE_SIMPLE_PROJECT.md
+```
+
 Run locally:
 
 ```bash
@@ -81,6 +89,7 @@ endpoint-compliance-bridge-lab/
 │   ├── ADHD_JOB_APPLICATION_BRIEF.md
 │   ├── FEYNMAN_EXPLANATION.md
 │   ├── FLASHCARDS.md
+│   ├── REAL_WORLD_USE_CASE.md
 │   ├── REPLICATE_SIMPLE_PROJECT.md
 │   ├── REVERSE_ENGINEER_MAP.md
 │   ├── SOURCES.md

@@ -6,6 +6,15 @@ This is the ADHD-friendly build path. Do one step at a time.
 
 Make a tiny web page that shows endpoint compliance data.
 
+## Important Difference
+
+There are two sets of commands:
+
+- Run this repo: `python3 src/server.py`, then open `http://localhost:8080`.
+- Build your own simple version: follow the steps below and create the files yourself.
+
+The video shows both. The commands in the repo README are mainly for running and testing this finished project.
+
 ## Step 1 - Create A Folder
 
 ```bash
