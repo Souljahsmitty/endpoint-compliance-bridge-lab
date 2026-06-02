@@ -30,7 +30,13 @@ Truthful interview phrasing:
 
 These commands run this finished repo. They are not the full from-scratch build path.
 
-For the from-scratch build path, read:
+For the full command-by-command build path, read:
+
+```text
+docs/STEP_BY_STEP_COMMANDS.md
+```
+
+For the shorter from-scratch build path, read:
 
 ```text
 docs/REPLICATE_SIMPLE_PROJECT.md
@@ -94,6 +100,7 @@ endpoint-compliance-bridge-lab/
 │   ├── REPLICATE_SIMPLE_PROJECT.md
 │   ├── REVERSE_ENGINEER_MAP.md
 │   ├── SOURCES.md
+│   ├── STEP_BY_STEP_COMMANDS.md
 │   └── TRUTHFUL_TALKING_POINTS.md
 ├── src/
 │   ├── server.py
