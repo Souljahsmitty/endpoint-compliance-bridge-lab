@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Endpoint Compliance Bridge Lab</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #1f2937; }
+    header { background: #243447; color: white; padding: 24px; }
+    main { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0; }
+    .card { background: white; border: 1px solid #d8dee9; border-radius: 6px; padding: 16px; }
+    .number { font-size: 28px; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; background: white; border: 1px solid #d8dee9; }
+    th, td { text-align: left; padding: 10px; border-bottom: 1px solid #e5e7eb; }
+    th { background: #e9eef6; }
+    .ok { color: #0f766e; font-weight: 700; }
+    .warn { color: #b45309; font-weight: 700; }
+    code { background: #e9eef6; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Endpoint Compliance Bridge Lab</h1>
+    <p>JAMF-style inventory + BigFix-style patch status, normalized into one dashboard.</p>
+  </header>
+  <main>
+    <section class="grid">
+      <div class="card"><div class="number" id="devices">-</div><div>Total devices</div></div>
+      <div class="card"><div class="number" id="compliant">-</div><div>Compliant</div></div>
+      <div class="card"><div class="number" id="needsPatch">-</div><div>Needs patch</div></div>
+    </section>
+
+    <section class="card">
+      <strong>Mode:</strong> <span id="mode">loading</span>
+      <p>This lab defaults to safe mock data. Set <code>MOCK_MODE=false</code> only when real lab credentials are configured.</p>
+    </section>
+
+    <h2>Device Summary</h2>
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Platform</th><th>MDM Source</th><th>OS</th><th>Patch Status</th><th>Critical Missing</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </main>
+
+  <script>
+    async function loadSummary() {
+      const response = await fetch('/api/summary');
+      const data = await response.json();
+      document.getElementById('mode').textContent = data.mode;
+      document.getElementById('devices').textContent = data.counts.devices;
+      document.getElementById('compliant').textContent = data.counts.compliant;
+      document.getElementById('needsPatch').textContent = data.counts.needs_patch;
+
+      const rows = document.getElementById('rows');
+      rows.innerHTML = '';
+      for (const device of data.devices) {
+        const status = device.patch_status || 'Unknown';
+        const klass = status === 'Compliant' ? 'ok' : status === 'Needs Patch' ? 'warn' : '';
+        rows.innerHTML += `<tr>
+          <td>${device.name || ''}</td>
+          <td>${device.platform || ''}</td>
+          <td>${device.mdm || ''}</td>
+          <td>${device.os_version || ''}</td>
+          <td class="${klass}">${status}</td>
+          <td>${device.critical_missing ?? ''}</td>
+        </tr>`;
+      }
+    }
+    loadSummary();
+  </script>
+</body>
+</html>
