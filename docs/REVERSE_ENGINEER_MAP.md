@@ -1,35 +1,45 @@
-# Requirement Map
+# Capability Map
 
-## Job Requirement
+This map connects the lab files to the endpoint-compliance workflow they model.
 
-"Working experience with JAMF Pro, Intune, and BigFix."
+## Workflow Pieces
 
-## What The Employer Probably Needs
-
-- Someone who can understand managed device inventory.
-- Someone who can read endpoint compliance status.
-- Someone who can help enforce patching and configuration standards.
-- Someone who can troubleshoot why a device is not reporting correctly.
-- Someone who can document the status clearly for audits or security reviews.
-
-## What This Project Builds Toward
-
-| Employer Need | Lab Project Piece |
+| Endpoint Workflow Need | Lab Project Piece |
 | --- | --- |
-| Device inventory | `JamfClient.fetch_devices()` |
-| Patch/compliance status | `BigFixClient.fetch_patch_summary()` |
-| Reporting dashboard | `static/index.html` |
-| Safe credential handling | environment variables |
-| Repeatable deployment | `Dockerfile` |
-| Audit-style explanation | docs folder |
-| Recruiter-safe truth | `TRUTHFUL_TALKING_POINTS.md` |
+| Read managed-device inventory | `JamfClient.fetch_devices()` |
+| Read patch/compliance status | `BigFixClient.fetch_patch_summary()` |
+| Combine device records | `build_summary()` in `src/server.py` |
+| Display endpoint status | `static/index.html` |
+| Expose machine-readable output | `/api/summary` |
+| Keep credentials out of code | environment variables |
+| Package the app repeatably | `Dockerfile` |
+| Explain run/test behavior | `docs/RUN_AND_TEST.md` |
+| Explain safe demo boundaries | `docs/SECURITY_AND_DEMO_NOTES.md` |
 
-## Next Project Upgrade
+## Data Flow
 
-Build one small add-on per missing tool:
+```text
+JAMF-style inventory
+  + BigFix-style patch status
+  -> normalized endpoint records
+  -> summary counts
+  -> local dashboard and JSON API
+```
 
-1. JAMF: add a page explaining API Roles, API Clients, token flow, and computer inventory.
-2. BigFix: add a page explaining Relevance query basics and patch status.
-3. Intune: add a Microsoft Graph mock client for managed devices.
-4. Compliance: add a CSV export for "devices needing patch."
-5. Reporting: add a CSV export for "devices needing patch."
+## Current Lab Behavior
+
+The default mock data produces:
+
+```text
+3 total devices
+2 compliant devices
+1 device needing patch attention
+```
+
+## Next Project Upgrades
+
+1. Add an Intune-style mock client for managed Windows devices.
+2. Add CSV export for devices needing patch attention.
+3. Add unit tests for record matching and summary counts.
+4. Add configurable match keys beyond device name.
+5. Add dashboard filtering by platform, MDM source, and patch status.
