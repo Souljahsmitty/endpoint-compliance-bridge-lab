@@ -62,13 +62,15 @@ because it needs patch attention.
 5. They open a ticket or remediation task.
 6. They document the result for operations/security review.
 
-## How To Explain It To A Recruiter
+## Operational Value
 
-"This lab models a real endpoint operations use case: combining Mac inventory from a JAMF-style source with patch/compliance status from a BigFix-style source, then showing a simple dashboard that tells an endpoint team what needs attention first."
+The value is the operating pattern:
 
-## How To Explain It To A Hiring Manager
-
-"The value is not the fancy UI. The value is the operational pattern: collect endpoint inventory, collect compliance state, normalize the data, identify devices needing action, and document the workflow clearly."
+1. collect endpoint inventory
+2. collect compliance state
+3. normalize the data
+4. identify devices needing action
+5. document the result
 
 ## What This Would Need For Production
 

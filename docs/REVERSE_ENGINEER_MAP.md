@@ -1,4 +1,4 @@
-# Reverse-Engineer Map
+# Requirement Map
 
 ## Job Requirement
 
@@ -24,18 +24,6 @@
 | Audit-style explanation | docs folder |
 | Recruiter-safe truth | `TRUTHFUL_TALKING_POINTS.md` |
 
-## Gap Still Remaining
-
-This lab does not replace production experience with:
-
-- JAMF Pro configuration profiles
-- JAMF policies
-- Apple Business Manager enrollment
-- Intune device compliance policy administration
-- BigFix fixlets/actions
-- BigFix production patch deployment
-- MECM/SCCM or Autopilot administration
-
 ## Next Project Upgrade
 
 Build one small add-on per missing tool:
@@ -44,4 +32,4 @@ Build one small add-on per missing tool:
 2. BigFix: add a page explaining Relevance query basics and patch status.
 3. Intune: add a Microsoft Graph mock client for managed devices.
 4. Compliance: add a CSV export for "devices needing patch."
-5. Docs: add a recruiter-facing one-page project brief.
+5. Reporting: add a CSV export for "devices needing patch."

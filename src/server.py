@@ -38,9 +38,9 @@ def build_summary():
         },
         "devices": devices,
         "notes": [
-            "Mock mode is safe for portfolio demos.",
+            "Mock mode is safe for local demos.",
             "Live mode requires real JAMF Pro and BigFix credentials.",
-            "This project demonstrates integration structure, not production admin tenure.",
+            "This project demonstrates endpoint inventory and patch-status reporting structure.",
         ],
     }
 

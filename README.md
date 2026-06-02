@@ -1,30 +1,18 @@
 # Endpoint Compliance Bridge Lab
 
-A small, truthful portfolio project that demonstrates the structure of a JAMF Pro + BigFix endpoint-compliance integration without claiming production administration experience.
+A small local dashboard that demonstrates a JAMF Pro + BigFix endpoint-compliance reporting pattern with mock data.
 
 The app runs a local HTML dashboard. By default it uses mock data. If real lab credentials are provided, the same client structure can call JAMF Pro and BigFix REST APIs.
 
-## What This Proves
+## What It Shows
 
-- I understand the basic job of JAMF Pro: Apple/macOS device inventory and management data.
-- I understand the basic job of BigFix: endpoint inventory, patch, and compliance data.
-- I can structure API clients, environment variables, mock mode, Docker, and a simple HTML dashboard.
-- I can document the difference between "built a lab integration" and "administered JAMF/BigFix in production."
-
-## What This Does Not Prove
-
-- It does not prove years of JAMF Pro administration.
-- It does not prove years of BigFix administration.
-- It does not prove access to an enterprise tenant.
-- It does not prove production patch authority.
-
-Truthful resume phrasing:
-
-> Built a Dockerized endpoint-compliance lab that models JAMF Pro and BigFix API integration patterns, normalizes mock device/patch data, and presents a simple HTML compliance dashboard.
-
-Truthful interview phrasing:
-
-> I have not been a dedicated JAMF or BigFix administrator yet. I built a lab project to understand the API shape, authentication flow, device inventory concepts, patch-compliance reporting pattern, Docker packaging, and the kind of documentation an endpoint team would expect.
+- JAMF-style macOS inventory data
+- BigFix-style patch/compliance data
+- normalized endpoint summary data
+- a local HTML dashboard
+- a JSON API endpoint
+- Docker packaging
+- mock-mode security hygiene
 
 ## Quick Start
 
@@ -33,13 +21,13 @@ These commands run this finished repo. They are not the full from-scratch build 
 For the full command-by-command build path, read:
 
 ```text
-docs/STEP_BY_STEP_COMMANDS.md
+docs/BUILD_FROM_SCRATCH.md
 ```
 
-For the shorter from-scratch build path, read:
+For the run and test commands, read:
 
 ```text
-docs/REPLICATE_SIMPLE_PROJECT.md
+docs/RUN_AND_TEST.md
 ```
 
 Run locally:
@@ -92,17 +80,14 @@ endpoint-compliance-bridge-lab/
 ├── Dockerfile
 ├── README.md
 ├── docs/
-│   ├── ADHD_JOB_APPLICATION_BRIEF.md
-│   ├── FEYNMAN_EXPLANATION.md
-│   ├── FLASHCARDS.md
-│   ├── GLOSSARY_AND_BASIC_TEST.md
+│   ├── BUILD_FROM_SCRATCH.md
+│   ├── PROJECT_OVERVIEW.md
 │   ├── REAL_WORLD_USE_CASE.md
-│   ├── REPLICATE_SIMPLE_PROJECT.md
 │   ├── REVERSE_ENGINEER_MAP.md
+│   ├── RUN_AND_TEST.md
 │   ├── SECURITY_AND_DEMO_NOTES.md
 │   ├── SOURCES.md
-│   ├── STEP_BY_STEP_COMMANDS.md
-│   └── TRUTHFUL_TALKING_POINTS.md
+│   └── working-dashboard.png
 ├── src/
 │   ├── server.py
 │   └── integrations/

@@ -80,9 +80,9 @@ The values above are placeholders. Do not use real values in a public repo or vi
 
 That helps prevent accidental commits of local secrets.
 
-## Truth Boundary
+## Demo Scope
 
-This project demonstrates:
+This project includes:
 
 - mock mode
 - API client structure
@@ -91,11 +91,3 @@ This project demonstrates:
 - patch/compliance reporting shape
 - local testing
 - Docker packaging structure
-
-It does not demonstrate:
-
-- production JAMF administration
-- production BigFix administration
-- live patch deployment
-- real tenant access
-- real endpoint remediation authority

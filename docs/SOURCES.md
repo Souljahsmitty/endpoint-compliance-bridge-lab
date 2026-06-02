@@ -25,6 +25,6 @@ Project takeaway:
 - Query workflows often use BigFix Relevance to ask questions about managed endpoints.
 - A reporting project can query endpoint data, normalize it, and show compliance state.
 
-## Truth Boundary
+## Data Boundary
 
-This lab is based on public documentation and mock data unless real tenant credentials are supplied. It is valid as a learning/portfolio project, not proof of production administration years.
+This lab uses public documentation and mock data unless real tenant credentials are supplied through environment variables.
